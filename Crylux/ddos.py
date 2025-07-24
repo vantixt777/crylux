@@ -95,11 +95,11 @@ def print_banner():
 def main():
     print_banner()
 
-    # Input
+   
     target_ip = input(Colorate.Horizontal(Colors.purple_to_blue, "[?] TARGET IP: "))
     target_port = int(input(Colorate.Horizontal(Colors.purple_to_blue, "[?] TARGET PORT: ")))
 
-    # Mode selection
+    
     menu = """
 [1] ➤ SYN-Flood (TCP Connection Overload)
 [2] ➤ UDP-Flood (Bandwidth Killer)
@@ -123,7 +123,7 @@ def main():
     threads = int(input(Colorate.Horizontal(Colors.purple_to_blue, "[?] THREADS (Default: 500): ")))
     attack_time = int(input(Colorate.Horizontal(Colors.purple_to_blue, "[?] ATTACK DURATION (Seconds): ")))
 
-    # Launch
+    
     attacker = BlackoutX(target_ip, target_port)
     attacker.start_attack(attack_types[choice], threads, attack_time)
 
